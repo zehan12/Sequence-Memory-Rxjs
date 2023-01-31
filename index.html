@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/rxjs@6.4.0/bundles/rxjs.umd.min.js"></script>
+    <title>Sequence Memory</title>
+    <style>
+        .container {
+            text-align: center;
+            display: grid;
+            place-items: center;
+        }
+        #info {
+            color: white;
+            font-size: 38px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0 50px;
+        }
+        body {
+            background-color: #2B87D1;
+                    }
+
+        .parent {
+            border-spacing: 25px;
+            width: 39%;
+            padding: 0.5em;
+        }
+
+        .parent.perspective {
+            perspective: 50em;
+        }
+
+        .child {
+            cursor: pointer;
+            margin: 20px 0;
+            max-width: 12em;
+            min-width: 10em;
+            height: 12em;
+            padding: 0.5em;
+            display: table-cell;
+            /* background-color: #2573C1; */
+            background-color: red;
+            border-radius: 20px;
+            /* border: 5px solid white; */
+        }
+
+        .parent.perspective .child {
+            transform: rotateX(40deg);
+            transition: all 0.3s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div id="info">Train Your Memory!</div>
+    <div id="grid" class="grid parent perspective">
+        <div>
+            <div class="child" id="1"></div>
+            <div class="child" id="2"></div>
+            <div class="child" id="3"></div>
+        </div>
+        <div>
+            <div class="child" id="4"></div>
+            <div class="child" id="5"></div>
+            <div class="child" id="6"></div>
+        </div>
+        <div>
+            <div class="child" id="7"></div>
+            <div class="child" id="8"></div>
+            <div class="child" id="9"></div>
+        </div>
+    </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
