@@ -24,7 +24,10 @@ document.querySelector(".reset").addEventListener('click', () => {
 })
 
 const setInfo = (text) => {
-    if (text === "GAME OVER!") {
+    if (text === "GAME OVER!") {    
+        document
+        .querySelectorAll('.child')
+        .forEach((c) => (c.style.background = '#8F0A22'));
         document.querySelector(".level").innerText = ``
     }
     return (document.getElementById('info').innerHTML = text)
